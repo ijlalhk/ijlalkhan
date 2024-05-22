@@ -1,4 +1,4 @@
-name: Build, Deploy to Hostinger, and Update GitHub
+name: Upload Build to Hostinger
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-deploy-and-update:
+  upload-build:
     runs-on: ubuntu-latest
 
     env:
@@ -14,34 +14,18 @@ jobs:
       FTP_USER: ${{ secrets.FTP_USER }}
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       FTP_PORT: 21
-      LOCAL_DIR: "ijlalkhan"
+      LOCAL_DIR: "ijlalkhan/build"
       REMOTE_DIR: "/public_html"
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Install dependencies and build
-      run: |
-        # Add commands here to install dependencies and build your project
-        # Example:
-        # npm install
-        # npm run build
-        # Or any other commands you use to build your project
-
+      
     - name: Install lftp
       run: |
         sudo apt-get update
         sudo apt-get install lftp -y
 
-    - name: Deploy build artifacts to Hostinger using lftp
+    - name: Upload build folder contents to Hostinger using lftp
       run: |
-        lftp -e "set ssl:verify-certificate no; open -u $FTP_USER,$FTP_PASSWORD -p $FTP_PORT $FTP_SERVER; mirror --reverse --delete --verbose $LOCAL_DIR/build $REMOTE_DIR; bye"
-
-    - name: Update GitHub repository
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@users.noreply.github.com"
-        git add .
-        git commit -m "Auto-deploys israrahmadr"
-        git push origin main
+        lftp -e "set ssl:verify-certificate no; open -u $FTP_USER,$FTP_PASSWORD -p $FTP_PORT $FTP_SERVER; mirror --reverse --delete --verbose $LOCAL_DIR $REMOTE_DIR; bye"
