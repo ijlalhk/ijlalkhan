@@ -1,4 +1,4 @@
-name: Upload Build to Hostinger
+name: Upload Build to Hostingby israrahmad sssss
 
 on:
   push:
