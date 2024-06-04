@@ -12,6 +12,7 @@ import {
   StarsCanvas,
 } from "./components";
 import Footer from "./components/footer";
+import { Education } from "./components/education";
 
 // App
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         </div>
         <About />
         <Experience />
+        <Education />
         <Tech />
         <Works />
         {/* <Feedbacks /> */}

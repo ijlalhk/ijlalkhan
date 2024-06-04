@@ -3,31 +3,12 @@
 
 import {
   barChart,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   uoo,
   fiverr,
   biome,
-  threejs,
   project1,
   project2,
   project3,
-  project4,
-  project5,
-  project6,
   user1,
   user2,
   user3,
@@ -45,6 +26,7 @@ import {
   databasestorage,
   consistency,
   cloud,
+  comsats,
 } from "../assets";
 
 import { FaPython, FaDocker, FaGitlab, FaLinux, FaGit, FaAws, FaJira } from 'react-icons/fa';
@@ -63,6 +45,11 @@ export const NAV_LINKS = [
   {
     id: "work",
     title: "Work",
+    link: null,
+  },
+  {
+    id: "education",
+    title: "Education",
     link: null,
   },
   {
@@ -204,15 +191,16 @@ export const TECHNOLOGIES = [
 // Experiences
 export const EXPERIENCES = [
   {
-    title: "Freelance Programmer",
-    company_name: "Fiverr · Freelance",
-    icon: fiverr,
+    title: "Research Assistant - Software Developer (Python)",
+    company_name: "University of Oulu",
+    icon: uoo,
     iconBg: "#E6DEDD",
-    date: "Nov 2016 - Aug 2018",
+    date: "Jan 2024 - Present",
     points: [
-      " As a freelancer on Fiverr, I successfully undertook a variety of tasks, including the creation of Python scripts and Tableau dashboards.",
-      " Full rating on 30 successful orders",
-      "100% success rate on all my projects",
+      "UBICOMP Oulu is a research center at the University of Oulu that develops cutting-edge technologies to integrate computing seamlessly into everyday life.",
+      "As a Research Assistant at UBICOMP Oulu, my primary responsibilities centered around conducting research on the emerging technologies of Large Language Models (LLMs) and GPT models and exploring their applications in education.",
+      "Successfully created a 100% secure private GPT project using open-source LLMs, showcasing expertise in privacy and security.",
+      "Designed an educational course on Leveraging Existing LLM Tools and Prompt Engineering, highlighting a commitment to knowledge sharing and education.",
     ],
   },
   {
@@ -229,16 +217,43 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Research Assistant - Software Developer (Python)",
-    company_name: "University of Oulu",
+    title: "Freelance Programmer",
+    company_name: "Fiverr · Freelance",
+    icon: fiverr,
+    iconBg: "#E6DEDD",
+    date: "Nov 2016 - Aug 2018",
+    points: [
+      "As a freelancer on Fiverr, I successfully undertook a variety of tasks, including the creation of Python scripts and Tableau dashboards.",
+      "Full rating on 30 successful orders",
+      "100% success rate on all my projects",
+    ],
+  },
+] as const;
+
+// Education
+export const EDUCATION = [
+  {
+    title: "Master of Computer Science & Engineering",
+    institution_name: "University of Oulu, Finland",
     icon: uoo,
     iconBg: "#E6DEDD",
-    date: "Jan 2024 - Present",
+    date: "Sep 2022 - Current",
     points: [
-      " UBICOMP Oulu is a research center at the University of Oulu that develops cutting-edge technologies to integrate computing seamlessly into everyday life.",
-      "As a Research Assistant at UBICOMP Oulu, my primary responsibilities centered around conducting research on the emerging technologies of Large Language Models (LLMs) and GPT models and exploring their applications in education.",
-      " Successfully created a 100% secure private GPT project using open-source LLMs, showcasing expertise in privacy and security.",
-      " Designed an educational course on Leveraging Existing LLM Tools and Prompt Engineering, highlighting a commitment to knowledge sharing and education.",
+      "Focused on software engineering and development.",
+      "Deepened understanding of computer programming and algorithms.",
+      " Explored artificial intelligence and machine learning.",
+    ],
+  },
+  {
+    title: "Bachelor of Computer Science",
+    institution_name: "COMSATS University, Islamabad",
+    icon: comsats,
+    iconBg: "#E6DEDD",
+    date: "May 2014 - Aug 2018",
+    points: [
+      "Developed proficiency in programming fundamentals and languages (Java,Python).",
+      "Mastered data structures and algorithms.",
+      "Gained knowledge in operating systems and system programming.",
     ],
   },
 ] as const;

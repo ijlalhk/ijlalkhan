@@ -39,6 +39,7 @@ import typescript from "./tech/typescript.png";
 import uoo from "./company/uoo.png";
 import biome from "./company/biome.png";
 import fiverr from "./company/fiverr.png";
+import comsats from "./company/comsats.png";
 
 import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
@@ -106,4 +107,5 @@ export {
   databasestorage,
   consistency,
   cloud,
+  comsats,
 };
