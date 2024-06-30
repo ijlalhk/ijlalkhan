@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  my-vite-app:
+    image: ijkalhk/my-vite-app:latest
+    ports:
+      - "80:80"
+
